@@ -92,8 +92,8 @@ def display_metrics(metrics):
           metrics["total_cpus_avail"]))
     print("Total Configured CPUs      : {0:>8}".format(
           metrics["total_cpus_config"]))
-    print("Cluster CPU Utilization    : {0:>7}%".format(
-          metrics["total_cpus_alloc"] * 100 / metrics["total_cpus_avail"]))
+    print("Cluster CPU Utilization    : {0:>7%}".format(
+          metrics["total_cpus_alloc"] / metrics["total_cpus_avail"]))
     print()
 
     # MEMORY
@@ -103,8 +103,8 @@ def display_metrics(metrics):
           human_readable(metrics["total_memory_avail"] * 1024 * 1024)))
     print("Total Configured Memory    : {0:>8}".format(
           human_readable(metrics["total_memory_config"] * 1024 * 1024)))
-    print("Cluster Memory Utilization : {0:>7}%".format(
-          metrics["total_memory_alloc"] * 100 / metrics["total_memory_avail"]))
+    print("Cluster Memory Utilization : {0:>7%}".format(
+          metrics["total_memory_alloc"] / metrics["total_memory_avail"]))
     print()
 
 
